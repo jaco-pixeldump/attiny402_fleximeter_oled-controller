@@ -1,0 +1,292 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 700" width="1140" height="700" style="background-color:#181825; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="icGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#262936" />
+      <stop offset="100%" stop-color="#161822" />
+    </linearGradient>
+
+    <linearGradient id="oledGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2230" />
+      <stop offset="100%" stop-color="#141722" />
+    </linearGradient>
+
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#090d13" />
+      <stop offset="100%" stop-color="#020305" />
+    </linearGradient>
+
+    <linearGradient id="flexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#242b2e" />
+      <stop offset="50%" stop-color="#2e383c" />
+      <stop offset="100%" stop-color="#242b2e" />
+    </linearGradient>
+
+    <linearGradient id="updiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#282033" />
+      <stop offset="100%" stop-color="#191420" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1140" height="700" fill="#181825"/>
+  <rect x="15" y="15" width="1110" height="670" rx="12" fill="none" stroke="#313244" stroke-width="1.5"/>
+
+  <!-- Top Title Banner -->
+  <rect x="15" y="15" width="1110" height="64" rx="12" fill="#11111b"/>
+  <line x1="15" y1="79" x2="1125" y2="79" stroke="#313244" stroke-width="1.5"/>
+  <text x="570" y="44" text-anchor="middle" fill="#cdd6f4" font-size="20" font-weight="700" letter-spacing="1">ATtiny402 FLEXIMETER OLED CONTROLLER</text>
+  <text x="570" y="66" text-anchor="middle" fill="#a6adc8" font-size="12">Complete Hardware Schematic • Zero-RAM SSD1306 Display &amp; 10-Bit ADC Sensor Divider</text>
+
+  <!-- ========================================================================= -->
+  <!-- 1. ATtiny402 IC (Center) -->
+  <!-- ========================================================================= -->
+  <g transform="translate(420, 180)">
+    <!-- IC Shadow & Body -->
+    <rect x="4" y="4" width="280" height="290" rx="10" fill="#11111b" opacity="0.6"/>
+    <rect x="0" y="0" width="280" height="290" rx="10" fill="url(#icGrad)" stroke="#585b70" stroke-width="2"/>
+    
+    <!-- Notch / Pin 1 indicator -->
+    <path d="M 128 0 A 12 12 0 0 0 152 0" fill="#181825" stroke="#585b70" stroke-width="1.5"/>
+    <circle cx="24" cy="24" r="4" fill="#f38ba8"/>
+
+    <!-- IC Center Content -->
+    <text x="140" y="75" text-anchor="middle" fill="#cdd6f4" font-size="18" font-weight="700" letter-spacing="0.5">ATtiny402</text>
+    <text x="140" y="96" text-anchor="middle" fill="#89b4fa" font-size="12" font-weight="600">8-Pin SOIC / DIP</text>
+    <text x="140" y="122" text-anchor="middle" fill="#a6adc8" font-size="10">20 MHz Internal Clock</text>
+    <text x="140" y="138" text-anchor="middle" fill="#6c7086" font-size="10">4 KB Flash • 256 B SRAM</text>
+    
+    <rect x="55" y="156" width="170" height="22" rx="4" fill="#11111b" stroke="#313244" stroke-width="1"/>
+    <text x="140" y="171" text-anchor="middle" fill="#a6e3a1" font-size="10" font-weight="600">Hardware TWI0 Master (400kHz)</text>
+
+    <rect x="55" y="184" width="170" height="22" rx="4" fill="#11111b" stroke="#313244" stroke-width="1"/>
+    <text x="140" y="199" text-anchor="middle" fill="#f9e2af" font-size="10" font-weight="600">10-Bit ADC (16x Oversampled)</text>
+
+    <!-- Pins and Internal Pin Labels -->
+    <!-- Left Pins (1 to 4) -->
+    <!-- Pin 1: VDD -->
+    <rect x="-14" y="30" width="14" height="16" rx="2" fill="#bac2de"/>
+    <text x="12" y="42" text-anchor="start" fill="#fab387" font-size="11" font-weight="700">1: VDD</text>
+    
+    <!-- Pin 2: PA6 (AIN6) -->
+    <rect x="-14" y="90" width="14" height="16" rx="2" fill="#bac2de"/>
+    <text x="12" y="102" text-anchor="start" fill="#f9e2af" font-size="11" font-weight="700">2: PA6 (AIN6)</text>
+
+    <!-- Pin 3: PA7 -->
+    <rect x="-14" y="150" width="14" height="16" rx="2" fill="#bac2de"/>
+    <text x="12" y="162" text-anchor="start" fill="#6c7086" font-size="11">3: PA7 (N/C)</text>
+
+    <!-- Pin 4: PA1 (SDA) -->
+    <rect x="-14" y="230" width="14" height="16" rx="2" fill="#bac2de"/>
+    <text x="12" y="242" text-anchor="start" fill="#89dceb" font-size="11" font-weight="700">4: PA1 (SDA)</text>
+
+    <!-- Right Pins (8 down to 5) -->
+    <!-- Pin 8: GND -->
+    <rect x="280" y="30" width="14" height="16" rx="2" fill="#bac2de"/>
+    <text x="268" y="42" text-anchor="end" fill="#9399b2" font-size="11" font-weight="700">8: GND</text>
+
+    <!-- Pin 7: PA3 -->
+    <rect x="280" y="90" width="14" height="16" rx="2" fill="#bac2de"/>
+    <text x="268" y="102" text-anchor="end" fill="#6c7086" font-size="11">7: PA3 (N/C)</text>
+
+    <!-- Pin 6: PA0 (UPDI) -->
+    <rect x="280" y="150" width="14" height="16" rx="2" fill="#bac2de"/>
+    <text x="268" y="162" text-anchor="end" fill="#cba6f7" font-size="11" font-weight="700">6: PA0 (UPDI)</text>
+
+    <!-- Pin 5: PA2 (SCL) -->
+    <rect x="280" y="230" width="14" height="16" rx="2" fill="#bac2de"/>
+    <text x="268" y="242" text-anchor="end" fill="#74c7ec" font-size="11" font-weight="700">5: PA2 (SCL)</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 2. Decoupling Capacitor C1 across Pin 1 & Pin 8 -->
+  <!-- ========================================================================= -->
+  <g transform="translate(540, 115)">
+    <rect x="0" y="0" width="40" height="24" rx="4" fill="#313244" stroke="#fab387" stroke-width="1.5"/>
+    <text x="20" y="16" text-anchor="middle" fill="#fab387" font-size="10" font-weight="bold">100nF</text>
+    <text x="20" y="38" text-anchor="middle" fill="#a6adc8" font-size="10">C1 (Decoupling)</text>
+  </g>
+  <!-- Traces connecting C1 -->
+  <path d="M 406 218 L 360 218 L 360 127 L 540 127" fill="none" stroke="#fab387" stroke-width="2"/>
+  <path d="M 714 218 L 750 218 L 750 127 L 580 127" fill="none" stroke="#585b70" stroke-width="2"/>
+
+  <!-- ========================================================================= -->
+  <!-- 3. Flex Sensor Circuit (Left Side) -->
+  <!-- ========================================================================= -->
+  <g transform="translate(50, 175)">
+    <!-- Shadow & Background -->
+    <rect x="4" y="4" width="170" height="170" rx="10" fill="#11111b" opacity="0.6"/>
+    <rect x="0" y="0" width="170" height="170" rx="10" fill="url(#flexGrad)" stroke="#a6e3a1" stroke-width="2"/>
+    
+    <!-- Sensor internal pattern -->
+    <rect x="15" y="15" width="140" height="140" rx="6" fill="#181825" opacity="0.4"/>
+    <path d="M 25 40 Q 85 25 145 40 M 25 75 Q 85 60 145 75 M 25 110 Q 85 95 145 110 M 25 140 Q 85 125 145 140" fill="none" stroke="#585b70" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+    <text x="85" y="50" text-anchor="middle" fill="#a6e3a1" font-size="13" font-weight="700">FLEX SENSOR PAD</text>
+    <text x="85" y="70" text-anchor="middle" fill="#cdd6f4" font-size="11">Square Pad 3 × 3 cm</text>
+    <text x="85" y="95" text-anchor="middle" fill="#f9e2af" font-size="10">At Rest: Open (∞ Ω)</text>
+    <text x="85" y="112" text-anchor="middle" fill="#f9e2af" font-size="10">Bent 45°: ~10 kΩ</text>
+    <text x="85" y="130" text-anchor="middle" fill="#a6adc8" font-size="9">Piezoresistive Film</text>
+
+    <!-- Terminals -->
+    <circle cx="85" cy="0" r="5" fill="#fab387"/>
+    <circle cx="85" cy="170" r="5" fill="#f9e2af"/>
+    <text x="97" y="14" fill="#fab387" font-size="10" font-weight="bold">Terminal 1 (VDD)</text>
+    <text x="97" y="165" fill="#f9e2af" font-size="10" font-weight="bold">Terminal 2 (Out)</text>
+  </g>
+
+  <!-- Pull-down Resistor R1 (4.7k) -->
+  <g transform="translate(110, 430)">
+    <rect x="0" y="0" width="50" height="26" rx="4" fill="#313244" stroke="#f9e2af" stroke-width="1.5"/>
+    <text x="25" y="17" text-anchor="middle" fill="#f9e2af" font-size="11" font-weight="bold">4.7 kΩ</text>
+    <text x="65" y="17" fill="#a6adc8" font-size="11">R1 (Pull-down)</text>
+    
+    <!-- Resistor top/bottom leads -->
+    <line x1="25" y1="-25" x2="25" y2="0" stroke="#f9e2af" stroke-width="2"/>
+    <line x1="25" y1="26" x2="25" y2="50" stroke="#585b70" stroke-width="2"/>
+    
+    <!-- Ground symbol -->
+    <line x1="13" y1="50" x2="37" y2="50" stroke="#585b70" stroke-width="2"/>
+    <line x1="17" y1="54" x2="33" y2="54" stroke="#585b70" stroke-width="1.5"/>
+    <line x1="21" y1="58" x2="29" y2="58" stroke="#585b70" stroke-width="1"/>
+    <text x="45" y="56" fill="#585b70" font-size="10">GND</text>
+  </g>
+
+  <!-- Wiring for Flex Sensor & Resistor -->
+  <!-- Top VDD rail to Flex Pad Terminal 1 -->
+  <path d="M 135 175 L 135 96 L 360 96" fill="none" stroke="#fab387" stroke-width="2"/>
+  <circle cx="135" cy="96" r="3" fill="#fab387"/>
+  <text x="135" y="85" text-anchor="middle" fill="#fab387" font-size="11" font-weight="bold">+3.3V / +5V (VDD Rail)</text>
+
+  <!-- Flex Pad Terminal 2 down to R1 top -->
+  <line x1="135" y1="345" x2="135" y2="405" stroke="#f9e2af" stroke-width="2"/>
+  
+  <!-- Junction between T2 and R1 -> to ATtiny402 Pin 2 (PA6 / AIN6) -->
+  <circle cx="135" cy="380" r="4" fill="#f9e2af"/>
+  <path d="M 135 380 L 250 380 L 250 270 L 406 270" fill="none" stroke="#f9e2af" stroke-width="2.5"/>
+  <circle cx="406" cy="270" r="3" fill="#f9e2af"/>
+  <text x="260" y="262" fill="#f9e2af" font-size="11" font-weight="600">Analog Voltage (0 .. 1.05V)</text>
+
+  <!-- ========================================================================= -->
+  <!-- 4. SSD1306 OLED Display (Bottom Right) -->
+  <!-- ========================================================================= -->
+  <g transform="translate(800, 360)">
+    <!-- Shadow & Board -->
+    <rect x="4" y="4" width="280" height="240" rx="10" fill="#11111b" opacity="0.6"/>
+    <rect x="0" y="0" width="280" height="240" rx="10" fill="url(#oledGrad)" stroke="#313244" stroke-width="2"/>
+    
+    <!-- Screen Bezel & Panel -->
+    <rect x="25" y="75" width="230" height="145" rx="6" fill="url(#screenGrad)" stroke="#45475a" stroke-width="1.5"/>
+    
+    <!-- Screen Content Preview -->
+    <text x="140" y="102" text-anchor="middle" fill="#89dceb" font-size="11" font-weight="bold">* ATtiny402 FLEX *</text>
+    <text x="45" y="128" text-anchor="start" fill="#cdd6f4" font-size="10">ADC :  325 / 1023</text>
+    <text x="45" y="148" text-anchor="start" fill="#a6e3a1" font-size="10">BEND:   98 %</text>
+    
+    <!-- Progress Bar Gauge -->
+    <rect x="45" y="160" width="190" height="12" rx="3" fill="#181825" stroke="#89dceb" stroke-width="1"/>
+    <rect x="47" y="162" width="186" height="8" rx="2" fill="#89dceb"/>
+    <text x="45" y="188" text-anchor="start" fill="#6c7086" font-size="8">FLAT</text>
+    <text x="235" y="188" text-anchor="end" fill="#6c7086" font-size="8">BENT</text>
+    <text x="140" y="208" text-anchor="middle" fill="#585b70" font-size="9">Supports 128x64 &amp; 128x32</text>
+
+    <!-- Header Label -->
+    <text x="140" y="24" text-anchor="middle" fill="#cdd6f4" font-size="13" font-weight="bold">SSD1306 I2C OLED</text>
+    <text x="140" y="40" text-anchor="middle" fill="#89dceb" font-size="10">I2C Address: 0x3C</text>
+
+    <!-- 4 Header Pins -->
+    <!-- Pin 1: GND -->
+    <circle cx="55" cy="56" r="5" fill="#585b70" stroke="#bac2de" stroke-width="1.5"/>
+    <text x="55" y="69" text-anchor="middle" fill="#a6adc8" font-size="9">GND</text>
+
+    <!-- Pin 2: VCC -->
+    <circle cx="110" cy="56" r="5" fill="#fab387" stroke="#bac2de" stroke-width="1.5"/>
+    <text x="110" y="69" text-anchor="middle" fill="#fab387" font-size="9">VCC</text>
+
+    <!-- Pin 3: SCL -->
+    <circle cx="170" cy="56" r="5" fill="#74c7ec" stroke="#bac2de" stroke-width="1.5"/>
+    <text x="170" y="69" text-anchor="middle" fill="#74c7ec" font-size="9">SCL</text>
+
+    <!-- Pin 4: SDA -->
+    <circle cx="225" cy="56" r="5" fill="#89dceb" stroke="#bac2de" stroke-width="1.5"/>
+    <text x="225" y="69" text-anchor="middle" fill="#89dceb" font-size="9">SDA</text>
+  </g>
+
+  <!-- OLED Wiring Traces -->
+  <!-- SCL: ATtiny402 Pin 5 (PA2) -> OLED SCL (cx=970, cy=416) -->
+  <path d="M 714 410 L 970 410 L 970 416" fill="none" stroke="#74c7ec" stroke-width="2.5"/>
+  <circle cx="714" cy="410" r="3" fill="#74c7ec"/>
+  <text x="735" y="402" fill="#74c7ec" font-size="11" font-weight="600">I2C SCL (PA2)</text>
+
+  <!-- SDA: ATtiny402 Pin 4 (PA1) -> OLED SDA (cx=1025, cy=416) -->
+  <path d="M 406 410 L 380 410 L 380 500 L 750 500 L 750 426 L 1025 426 L 1025 416" fill="none" stroke="#89dceb" stroke-width="2.5"/>
+  <circle cx="406" cy="410" r="3" fill="#89dceb"/>
+  <text x="440" y="492" fill="#89dceb" font-size="11" font-weight="600">I2C SDA (PA1)</text>
+
+  <!-- OLED VCC to VDD rail -->
+  <path d="M 910 411 L 910 96 L 360 96" fill="none" stroke="#fab387" stroke-width="2"/>
+  <circle cx="910" cy="96" r="3" fill="#fab387"/>
+
+  <!-- OLED GND to GND rail -->
+  <path d="M 855 411 L 855 530 L 750 530 L 750 218" fill="none" stroke="#585b70" stroke-width="2"/>
+  <circle cx="750" cy="218" r="3" fill="#585b70"/>
+
+  <!-- ========================================================================= -->
+  <!-- 5. SerialUPDI Programmer Interface (Top Right) -->
+  <!-- ========================================================================= -->
+  <g transform="translate(800, 130)">
+    <rect x="4" y="4" width="280" height="150" rx="8" fill="#11111b" opacity="0.6"/>
+    <rect x="0" y="0" width="280" height="150" rx="8" fill="url(#updiGrad)" stroke="#cba6f7" stroke-width="1.5"/>
+    <text x="140" y="24" text-anchor="middle" fill="#cba6f7" font-size="12" font-weight="bold">SERIAL UPDI PROGRAMMER</text>
+    <text x="140" y="40" text-anchor="middle" fill="#a6adc8" font-size="10">USB-UART Adapter (FTDI / CH340 / CP2102)</text>
+
+    <!-- Pins -->
+    <rect x="15" y="55" width="8" height="12" rx="2" fill="#bac2de"/>
+    <text x="30" y="65" fill="#fab387" font-size="10" font-weight="600">VCC (+3.3V/5V)</text>
+
+    <rect x="15" y="78" width="8" height="12" rx="2" fill="#bac2de"/>
+    <text x="30" y="88" fill="#a6adc8" font-size="10" font-weight="600">GND</text>
+
+    <rect x="15" y="101" width="8" height="12" rx="2" fill="#bac2de"/>
+    <text x="30" y="111" fill="#f38ba8" font-size="10" font-weight="600">TX</text>
+
+    <rect x="15" y="124" width="8" height="12" rx="2" fill="#bac2de"/>
+    <text x="30" y="134" fill="#a6e3a1" font-size="10" font-weight="600">RX</text>
+
+    <!-- Diode / Resistor UPDI merger circuit -->
+    <line x1="95" y1="107" x2="125" y2="107" stroke="#f38ba8" stroke-width="1.5"/>
+    <line x1="95" y1="130" x2="160" y2="130" stroke="#a6e3a1" stroke-width="1.5"/>
+
+    <!-- 1N5819 Schottky Diode or 4.7k Resistor symbol -->
+    <g transform="translate(125, 107)">
+      <!-- Diode triangle -->
+      <polygon points="12,-6 12,6 0,0" fill="#f38ba8"/>
+      <!-- Cathode line -->
+      <line x1="0" y1="-7" x2="0" y2="7" stroke="#f38ba8" stroke-width="1.5"/>
+      <line x1="12" y1="0" x2="35" y2="0" stroke="#cba6f7" stroke-width="1.5"/>
+      <line x1="35" y1="0" x2="35" y2="23" stroke="#cba6f7" stroke-width="1.5"/>
+      <text x="12" y="-9" text-anchor="middle" fill="#f38ba8" font-size="8">1N5819 (or 4.7k)</text>
+    </g>
+
+    <circle cx="160" cy="130" r="3" fill="#cba6f7"/>
+    <line x1="160" y1="130" x2="260" y2="130" stroke="#cba6f7" stroke-width="2"/>
+    <rect x="260" y="123" width="10" height="14" rx="2" fill="#cba6f7"/>
+    <text x="250" y="116" text-anchor="end" fill="#cba6f7" font-size="10" font-weight="bold">UPDI</text>
+  </g>
+
+  <!-- Trace from UPDI OUT to Pin 6 (PA0/UPDI) -->
+  <path d="M 1070 260 L 1090 260 L 1090 330 L 714 330" fill="none" stroke="#cba6f7" stroke-width="2"/>
+  <circle cx="714" cy="330" r="3" fill="#cba6f7"/>
+  <text x="735" y="322" fill="#cba6f7" font-size="11" font-weight="600">UPDI Programming Line (PA0)</text>
+
+  <!-- ========================================================================= -->
+  <!-- Legend & Info Box (Bottom Left) -->
+  <!-- ========================================================================= -->
+  <g transform="translate(40, 590)">
+    <rect x="0" y="0" width="370" height="75" rx="6" fill="#11111b" stroke="#313244" stroke-width="1"/>
+    <text x="15" y="20" fill="#cdd6f4" font-size="11" font-weight="bold">CIRCUIT SUMMARY &amp; SPECS:</text>
+    <text x="15" y="38" fill="#a6adc8" font-size="10">• Power Supply: 3.3V – 5.0V DC (100nF C1 close to ATtiny402)</text>
+    <text x="15" y="52" fill="#a6adc8" font-size="10">• I2C Bus: 400 kHz Fast-mode, Zero-RAM Direct-to-Display</text>
+    <text x="15" y="66" fill="#a6adc8" font-size="10">• Sensor Input: 10-bit ADC, PA6 (AIN6), 16x oversampled</text>
+  </g>
+</svg>

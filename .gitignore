@@ -1,0 +1,33 @@
+# PlatformIO build artifacts & packages
+.pio/
+.pioenvs/
+.piolibdeps/
+pio_build/
+
+# VS Code / IDE configuration
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Compiled binaries and libraries
+*.o
+*.a
+*.so
+*.hex
+*.elf
+*.bin
+
+# Operating system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Temporary and backup files
+*~
+*.swp
+*.bak
+*.tmp
+*.orig
